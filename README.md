@@ -12,7 +12,7 @@ More documentation will be provided soon...
 1. in the setup_env.sh set the YOCTO_HOME path. this should point to the path where all yocto and open-embedded layers and sources will reside.
 2. clone poky into YOCTO_HOME
 cd $YOCTO_HOME
-git clone -b rocko git://git.yoctoproject.org/poky.git
+git clone git://git.yoctoproject.org/poky.git
 3. clone the open-embedded meta layers
 cd $YOCTO_HOME
 git clone https://github.com/openembedded/meta-openembedded.git
@@ -35,3 +35,6 @@ At this point, all the dependent sources should be in place.
 source oe-init-build-env <PATH_TO_YOUR_BUILD_DIR>
 2 source the setup_env.sh
 3 run 'bitbake rpi-shout-image.bb' to start the build
+
+
+NOTE: the branch of poky should be master. otherwise there will be problems finding the meta-python layer exposed in openembedded
